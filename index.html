@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Intro</title>
+    <style>
+        /* CSS for the intro animation */
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: black;
+        }
+
+
+        #company-logo {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            
+        }
+
+        #game-title {
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 24px;
+            color: #fff;
+        
+        }
+
+        #intro-container {
+          
+            animation: introAnimation 10s linear;
+        }
+
+        @keyframes introAnimation {
+            0% {
+                opacity: 0;
+            }
+            75% {
+                opacity: 1;
+            }
+
+            100%{
+                opacity:0;
+            }
+        }
+    </style>
+</head>
+<body>
+      <!-- Audio element with autoplay -->
+     
+        <div id="intro-container">
+            <img id="company-logo" src="logo.png" alt="Company Logo" width="200">
+            <h1 id="game-title">Rex Dev</h1>
+        </div>
+        <audio id="introSound" autoplay>
+            <source src="dino.mp3" type="audio/mpeg">
+        </audio>
+        
+    <script>
+        // JavaScript for the intro animation
+
+        // Play sound during the intro
+
+
+       
+        
+    
+
+        // Redirect to the main game after the intro
+        setTimeout(() => {
+            window.location.href = 'sim.html'; // Replace with your game's URL
+        }, 8000); // Redirect after 8 seconds (adjust as needed to match the animation duration)
+    </script>
+</body>
+</html>
